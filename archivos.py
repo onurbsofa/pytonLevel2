@@ -39,3 +39,19 @@ y la cantidad de stock actual
 IMPORTANTE!!!! EL CODIGO DEBERA ESTAR CORRECTAMENTE MODULARIZADO
  
 """
+def main():
+
+    while True:
+        pJ = input('bienvenido a la creacion de personaje introduzca un nobre')
+
+
+        try :
+            arch = open(r"/ataques.csv","wt")
+            arch.write(str(pJ) + "\n")
+        except OSError as msg:
+            print("error",msg)
+        break
+
+        print()
+if __name__ == "__main__":
+    main()
